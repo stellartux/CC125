@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<title>CC125: Fourier Series</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+<script src="sketch.js" charset="utf-8"></script>
+<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<template id="slider-template">
+  <li>
+    <label>Radius:
+      <input type="range" class="radius" value="0" min="0" max="80" step="1">
+    </label>
+  </li>
+</template>
+
+<div>
+  <label for="slider-count">How many circles? </label>
+  <input type="number" id="slider-count" value="3" min="1">
+  <button type="button" id="play-button">Play Note</button>
+  <button type="button" id="stop-button">Stop Note</button>
+  <ol id="sliders"></ol>
+</div>
+
+</body>
+
+</html>
