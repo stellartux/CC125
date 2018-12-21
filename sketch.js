@@ -57,8 +57,15 @@ function setup () {
   }
   document.getElementById('sawtooth-wave').onclick = e => {
     let preset = []
-    for (let n = 1; n <= 12; n++) {
+    for (let n = 1; n <= 13; n++) {
       preset.push(1/n)
+    }
+    setSlidersToPreset(preset)
+  }
+  document.getElementById('smooth-saw').onclick = e => {
+    let preset = []
+    for (let n = 0; n <= 12; n++) {
+      preset.push(1/(2 ** n))
     }
     setSlidersToPreset(preset)
   }
@@ -66,7 +73,7 @@ function setup () {
     let preset = []
     let phases = []
     for (let n = 1; n <= 13; n++) {
-      preset.push(n % 2 ? 8 / ((n * Math.PI) ** 2) : 0)
+      preset.push(n % 2 ? 9.8 / ((n * Math.PI) ** 2) : 0)
       phases.push(n % 4 === 3)
     }
     setSlidersToPreset(preset, phases)
