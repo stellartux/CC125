@@ -19,7 +19,7 @@ canvas {
   flex-direction: column;
 }
 
-#container > input[type="number"] {
+input[type="number"] {
   width: 6ch;
 }
 
